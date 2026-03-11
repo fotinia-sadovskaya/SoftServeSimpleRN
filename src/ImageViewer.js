@@ -6,13 +6,10 @@ export default function ImageViewer({ placeholderImageSource }) {
   );
 }
 
-
 const styles = StyleSheet.create({
   image: {
-    width: 'auto',
-    height: 'auto',
+    width: 300,
+    height: 300,
+    resizeMode: 'contain',
   },
 });
-
- 
-

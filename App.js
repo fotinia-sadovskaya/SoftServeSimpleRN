@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Image } from 'react-native';
+import { StyleSheet, View, Image } from 'react-native';
 
 import ImageViewer from './src/ImageViewer';
 import Button from './src/Button';
@@ -9,17 +9,18 @@ const PlaceholderImage = require('./assets/images/softserve.png');
 export default function App() {
   return (
     <View style={styles.container}>
-      <Image source={PlaceholderImage} style={styles.image} />
       <StatusBar style="auto" />
+
+      <Image source={PlaceholderImage} style={styles.image} />
+
       <View style={styles.imageContainer}>
         <ImageViewer placeholderImageSource={PlaceholderImage} />
       </View>
+
       <View style={styles.footerContainer}>
         <Button label="Click me" />
-
       </View>
-      <StatusBar style="auto" />
-      </View>  
+    </View>
   );
 }
 
@@ -31,14 +32,19 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   imageContainer: {
-    flex: 0,
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   footerContainer: {
     flex: 1 / 3,
     alignItems: 'center',
+    justifyContent: 'center',
   },
   image: {
-    width: "100%",
+    width: '100%',
+    height: 200,
+    resizeMode: 'cover',
     borderRadius: 18,
   },
 });

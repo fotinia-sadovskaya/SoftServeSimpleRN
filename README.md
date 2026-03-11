@@ -1,5 +1,7 @@
 # Simple React Native Application
-### Requirement
+
+## Requirement
+
 - Install Git
 - Install Visual Studio Code with Expo plugins
 - Install Node.js v>18
@@ -8,12 +10,16 @@
 
 ### Setup and Run Application
 
-Clone this repository. 
+Clone this repository.
 Install dependencies
+
 ```{sh}
 npx expo install react-dom react-native-web @expo/webpack-config
+
 ```
+
 Run the app on mobile and web
+
 ```{sh}
 npx expo start
 ```
